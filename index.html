@@ -37,7 +37,7 @@
       <article class="catalog-item catalog-item--product-of-week">
         <header class="catalog-item__header">
           <h2 class="catalog-item__title">Вязаные корзинки</h2>
-          <p class="catalog-item__subtitle">Товар недели</p>
+          <p class="catalog-item__product-of-week">Товар недели</p>
         </header>
           <p class="catalog-item__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
           <table class="catalog-item__options">
@@ -47,11 +47,11 @@
             </tr>
             <tr>
               <td class="catalog-item__key">Диаметр:</td>
-              <td class="catalog-item__value">25см</td>
+              <td class="catalog-item__value">25 см</td>
             </tr>
             <tr>
               <td class="catalog-item__key">Высота:</td>
-              <td class="catalog-item__value">15см</td>
+              <td class="catalog-item__value">15 см</td>
             </tr>
           </table>
           <img src="http://placehold.it/260x315" alt="Вязаные корзинки">
@@ -86,7 +86,7 @@
           </div>
           <button class="reviews__prev" type="button">Предыдущий отзыв</button>
           <button class="reviews__next" type="button">Следующий отзыв</button>
-          <a class="btn" href="write-review.html">написать</a>
+          <a class="btn" href="write-review.html">Написать</a>
         </div>
       </section>
     </main>
@@ -119,10 +119,23 @@
           </span>
         </p>
         <p class="page-footer__copyright">
-          разработано
+          Разработано
           <a class="btn" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </p>
       </div>
     </footer>
+    <div class="modal">
+      <h1 class="modal__title">Добавить в корзину</h1>
+      <p class="modal__desc">Выберите размер:</p>
+      <div class="modal__size-list">
+        <label class="modal__size-item" for="size-s">S</label>
+        <input type="radio" name="size" id="size-s">
+        <label class="modal__size-item" for="size-m">M</label>
+        <input type="radio" name="size" id="size-m">
+        <label class="modal__size-item" for="size-l">L</label>
+        <input type="radio" name="size" id="size-l">
+      </div>
+      <a class="btn" href="#">Добавить</a>
+    </div>
   </body>
 </html>

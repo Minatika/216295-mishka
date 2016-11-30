@@ -29,10 +29,8 @@
           <header class="sections-catalog__header">
             <h2 class="sections-catalog__title">Милые штуки ручной работы для дома</h2>
           </header>
-          <div class="sections-catalog__item">
-            <a href="home-furnishings.html">Предметы интерьера</a>
-            <a href="kids-toys.html">Детские игрушки</a>
-          </div>
+          <a class="sections-catalog__item sections-catalog__item--home" href="home-furnishings.html">Предметы интерьера</a>
+          <a class="sections-catalog__item sections-catalog__item--kids" href="kids-toys.html">Детские игрушки</a>
         </div>
       </section>
       <article class="catalog-item catalog-item--product-of-week">
@@ -55,7 +53,7 @@
               <td class="catalog-item__value">15 см</td>
             </tr>
           </table>
-          <img src="http://placehold.it/260x315" alt="Вязаные корзинки">
+          <img src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки" width="260" height="315">
           <div class="catalog-item__price">Цена: 990 руб.</div>
           <a class="btn" href="knitted-baskets.html">Заказать</a>
       </article>
@@ -82,11 +80,11 @@
           <div class="reviews__list">
             <blockquote class="reviews__item">
               <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-              <cite class="reviews__autor-name">Анастасия Красильникова @misssssiskras</cite>
+              <cite class="reviews__autor-name">Анастасия Красильникова <span class="reviews__autor-nick">@misssssiskras</span></cite>
             </blockquote>
           </div>
-          <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews__next" type="button">Следующий отзыв</button>
+          <button class="reviews__btn reviews__btn--prev" type="button">Предыдущий отзыв</button>
+          <button class="reviews__btn reviews__btn--next" type="button">Следующий отзыв</button>
           <a class="btn" href="write-review.html">Написать</a>
         </div>
       </section>
@@ -96,19 +94,19 @@
         <header class="contacts__header">
           <h2 class="contacts__title">Контакты</h2>
         </header>
+        <table class="contacts__list">
+          <tr class="contacts__item">
+            <td class="contacts__key">e-mail:</td>
+            <td class="contacts__value"><a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
+          </tr>
+          <tr class="contacts__item">
+            <td class="contacts__key">адрес:</td>
+            <td class="contacts__value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+          </tr>
+        </table>
       </div>
-      <table class="contacts__list">
-        <tr>
-          <td class="contacts__key">e-mail:</td>
-          <td class="contacts__value">info@mimimishkashop.ru</td>
-        </tr>
-        <tr>
-          <td class="contacts__key">адрес:</td>
-          <td class="contacts__value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
-        </tr>
-      </table>
       <div class="map"></div>
-      <a class="btn" href="feedback.html"></a>
+      <a class="btn" href="feedback.html">Напишите нам</a>
     </section>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
@@ -121,7 +119,7 @@
         </p>
         <p class="page-footer__copyright">
           Разработано
-          <a class="btn" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="page-footer__academy" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </p>
       </div>
     </footer>
@@ -129,14 +127,14 @@
       <h2 class="modal__title">Добавить в корзину</h2>
       <p class="modal__desc">Выберите размер:</p>
       <div class="modal__size-list">
-        <label class="modal__size-item" for="size-s">S</label>
         <input type="radio" name="size" id="size-s" checked>
-        <label class="modal__size-item" for="size-m">M</label>
+        <label class="modal__size-item" for="size-s">S</label>
         <input type="radio" name="size" id="size-m">
-        <label class="modal__size-item" for="size-l">L</label>
+        <label class="modal__size-item" for="size-m">M</label>
         <input type="radio" name="size" id="size-l">
+        <label class="modal__size-item" for="size-l">L</label>
       </div>
-      <a class="btn" href="#">Добавить</a>
+      <a class="btn btn--modal" href="#">Добавить</a>
     </div>
   </body>
 </html>

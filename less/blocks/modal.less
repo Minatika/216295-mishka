@@ -1,0 +1,39 @@
+.modal {
+  padding: 36px 30px 46px;
+  border: 1px solid @color-border;
+  box-shadow: 0 5px 10px 0 @color-shadow;
+
+}
+
+.modal__title {
+  font-size: 25px;
+  line-height: 30px;
+  color: @text-color;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal__desс {
+  line-height: 30px;
+  text-align: center;
+}
+
+.modal__size-list {
+
+}
+
+.modal__size-item {
+  display: block;
+  width: 80px;
+  min-height: 16px;
+  padding: 16px 0;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid @color-border;
+}
+
+.modal input[type="radio"]:checked + .modal__size-item {
+  border-color: @color-secondary;
+}

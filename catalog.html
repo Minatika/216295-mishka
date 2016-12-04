@@ -7,21 +7,25 @@
   </head>
   <body class="page">
     <header class="page-header">
-      <h1 class="visually-hidden">Мишка</h1>
-      <div class="page-header__logo">
-        <img src="img/logo-mobile.svg" alt="Мишка" width="86" height="35">
-      </div>
-      <nav class="main-nav main-nav--closed">
-        <button class="main-nav__toggle" type="button"><img src="img/icon-menu-open.svg" alt="Открыть меню"></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a>Каталог товаров</a></li>
-            <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
-            <li class="main-nav__item">Поиск по сайту</li>
-            <li class="main-nav__item">Корзина: пока пуста</li>
-          </ul>
+      <div class="page-header__wrapper">
+        <h1 class="visually-hidden">Мишка</h1>
+        <div class="page-header__logo">
+          <img src="img/logo-mobile.svg" alt="Мишка" width="86" height="35">
         </div>
-      </nav>
+        <nav class="main-nav main-nav--closed">
+          <button class="main-nav__toggle" type="button"><img src="img/icon-menu-open.svg" alt="Открыть меню"></button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a>Каталог товаров</a></li>
+              <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
+            </ul>
+            <ul class="main-nav__user-list">
+              <li class="main-nav__user-item">Поиск по сайту</li>
+              <li class="main-nav__user-item">Корзина: пока пуста</li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main>
       <section class="heading">
@@ -50,7 +54,7 @@
           <article class="catalog-item">
             <a href="big-basket-of-toys.html"><img src="img/photo-3-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195"></a>
             <div class="catalog-item__wrapper">
-              <h2><a class="catalog-item__title" href="big-basket-of-toys.html">Большая корзинка для игрушек</a></h2>
+              <h2><a class="catalog-item__title" href="big-basket-of-toys.html">Большая корзинка для&nbsp;игрушек</a></h2>
               <p class="catalog-item__desc">Диаметр 30 см, высота 30 см</p>
               <p class="catalog-item__price">1500 руб.</p>
               <a class="catalog-item__to-order" href="big-basket-of-toys.html"></a>
@@ -61,9 +65,9 @@
       <section class="prodaction">
         <div class="prodaction__wrapper">
           <h2 class="prodaction__title">Процесс производства</h2>
-          <img src="img/video-mobile@1x.jpg" width="260" height="150">
+          <img class="prodaction__video" src="img/video-mobile@1x.jpg" width="260" height="150">
           <p class="prodaction__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a class="btn" href="order.html">Сделать заказ</a>
+          <a class="btn btn--prodaction" href="order.html">Сделать заказ</a>
         </div>
       </section>
     </main>

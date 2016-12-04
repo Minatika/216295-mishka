@@ -7,38 +7,41 @@
   </head>
   <body class="page">
     <header class="page-header">
-      <h1 class="visually-hidden">Мишка</h1>
-      <div class="page-header__logo">
-        <img src="img/logo-mobile.svg" alt="Мишка" width="86" height="35">
-      </div>
-      <nav class="main-nav main-nav--closed">
-        <button class="main-nav__toggle" type="button"><img src="img/icon-menu-open.svg" alt="Открыть меню"></button>
-        <div class="main-nav__wrapper">
+      <div class="page-header__wrapper">
+        <h1 class="visually-hidden">Мишка</h1>
+        <div class="page-header__logo">
+          <img src="img/logo-mobile.svg" alt="Мишка" width="86" height="35">
+        </div>
+        <nav class="main-nav main-nav--closed">
+          <button class="main-nav__toggle" type="button"><img src="img/icon-menu-open.svg" alt="Открыть меню"></button>
           <ul class="main-nav__list">
             <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
-            <li class="main-nav__item">Поиск по сайту</li>
-            <li class="main-nav__item">Корзина: пока пуста</li>
           </ul>
-        </div>
-      </nav>
+          <ul class="main-nav__user-list">
+            <li class="main-nav__user-item">Поиск по сайту</li>
+            <li class="main-nav__user-item">Корзина: пока пуста</li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <section class="sections-catalog">
+        <header class="sections-catalog__header">
+          <h2 class="sections-catalog__title">Милые штуки ручной работы для дома</h2>
+        </header>
         <div class="sections-catalog__wrapper">
-          <header class="sections-catalog__header">
-            <h2 class="sections-catalog__title">Милые штуки ручной работы для дома</h2>
-          </header>
           <a class="sections-catalog__item sections-catalog__item--home" href="home-furnishings.html">Предметы интерьера</a>
           <a class="sections-catalog__item sections-catalog__item--kids" href="kids-toys.html">Детские игрушки</a>
         </div>
       </section>
       <article class="catalog-item catalog-item--product-of-week">
-        <header class="catalog-item__header">
-          <h2 class="catalog-item__title catalog-item__title--product-of-week">Вязаные корзинки</h2>
-          <p class="catalog-item__product-of-week">Товар недели</p>
-        </header>
-          <p class="catalog-item__desc catalog-item__desc--product-of-week">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <div class="catalog-item__wrapper catalog-item__wrapper--product-of-week">
+          <header class="catalog-item__header">
+            <h2 class="catalog-item__title catalog-item__title--product-of-week">Вязаные корзинки</h2>
+            <p class="catalog-item__product-of-week">Товар недели</p>
+          </header>
+          <p class="catalog-item__desc catalog-item__desc--product-of-week">Экологически чистая пряжа, ручная&nbsp;работа. Доступны в шести расцветках, и трех размерах.</p>
           <table class="catalog-item__options">
             <tr>
               <td class="catalog-item__key">Цвет:</td>
@@ -54,8 +57,9 @@
             </tr>
           </table>
           <img src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки" width="260" height="315">
-          <div class="catalog-item__price catalog-item___price--product-of-week">Цена: 990 руб.</div>
-          <a class="btn" href="knitted-baskets.html">Заказать</a>
+          <div class="catalog-item__price catalog-item__price--product-of-week">Цена: 990 руб.</div>
+          <a class="btn btn--product-of-week" href="knitted-baskets.html">Заказать</a>
+        </div>
       </article>
       <section class="advantages">
         <div class="advantages__wrapper">
@@ -85,7 +89,7 @@
           </div>
           <button class="reviews__btn reviews__btn--prev" type="button">Предыдущий отзыв</button>
           <button class="reviews__btn reviews__btn--next" type="button">Следующий отзыв</button>
-          <a class="btn" href="write-review.html">Написать</a>
+          <a class="btn btn--reviews" href="write-review.html">Написать</a>
         </div>
       </section>
     </main>
@@ -95,18 +99,18 @@
           <h2 class="contacts__title">Контакты</h2>
         </header>
         <table class="contacts__list">
-          <tr class="contacts__item">
+          <tr class="contacts__item contacts__item--email">
             <td class="contacts__key">e-mail:</td>
             <td class="contacts__value"><a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
           </tr>
-          <tr class="contacts__item">
+          <tr class="contacts__item contacts__item--address">
             <td class="contacts__key">адрес:</td>
-            <td class="contacts__value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+            <td class="contacts__value">г. Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис 101</td>
           </tr>
         </table>
       </div>
       <div class="map"></div>
-      <a class="btn" href="feedback.html">Напишите нам</a>
+      <a class="btn btn--contacts" href="feedback.html">Напишите нам</a>
     </section>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
@@ -124,7 +128,7 @@
       </div>
     </footer>
     <div class="modal">
-      <h2 class="modal__title">Добавить в корзину</h2>
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
       <p class="modal__desc">Выберите размер:</p>
       <div class="modal__size-list">
         <input type="radio" name="size" id="size-s" checked>

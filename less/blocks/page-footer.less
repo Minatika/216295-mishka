@@ -4,17 +4,22 @@
 }
 
 .page-footer__wrapper {
-  margin: 0 30px;
+  .container();
+  .clearfix();
+  padding: 0 30px;
+  box-sizing: border-box;
 }
 
 .page-footer__social {
   border-bottom: 1px solid @color-gray--dark;
+  text-align: center;
 }
 
 .page-footer__copyright {
+  float: left;
   display: block;
-  margin: 0;
-  padding: 30px 40px 30px 30px;
+  margin: 0 38px;
+  padding: 30px 0;
   font-size: 19px;
   line-height: 18px;
   color: @text-color;
@@ -22,9 +27,37 @@
 }
 
 .page-footer__academy {
+  float: right;
   display: block;
   width: 27px;
   height: 34px;
   font-size: 0;
-  background: url("../../img/logo-htmlacademy.svg") no-repeat center;
+  margin-left: 25px;
+  background: url("../img/logo-htmlacademy.svg") no-repeat center;
+}
+
+@media @tablet-widths {
+
+  .page-footer__wrapper {
+    padding: 0;
+  }
+
+  .page-footer__social {
+    float: left;
+    margin-left: 260px;
+    border-bottom: none;
+  }
+
+  .page-footer__copyright {
+    float: right;
+    margin: 30px 0;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .page-footer__social {
+    margin-left: 450px;
+  }
 }

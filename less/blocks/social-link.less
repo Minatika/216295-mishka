@@ -2,21 +2,28 @@
   display: inline-block;
   width: 28px;
   height: 28px;
-  margin: 26px 31px;
+  margin: 26px 31px 26px 0;
   font-size: 0;
   text-decoration: none;
   text-align: center;
   vertical-align: top;
 
   &--in {
-    background: url("../../img/icon-insta.svg") no-repeat center;
+    background: url("../img/icon-insta.svg") no-repeat center;
   }
 
   &--fb {
-    background: url("../../img/icon-fb.svg") no-repeat center;
+    background: url("../img/icon-fb.svg") no-repeat center;
   }
 
   &--tw {
-    background: url("../../img/icon-twitter.svg") no-repeat center;
+    background: url("../img/icon-twitter.svg") no-repeat center;
+  }
+}
+
+@media @tablet-widths {
+
+  .social-link {
+    margin-top: 45px;
   }
 }

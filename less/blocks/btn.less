@@ -15,4 +15,51 @@
     background-color: @color-secondary;
     border-color: @color-secondary;
   }
+
+  &--contacts {
+    width: 256px;
+    margin: 0 30px;
+  }
+}
+
+@media @tablet-widths {
+
+  .btn {
+
+    &--product-of-week {
+      float: left;
+      width: 289px;
+      margin-right: 45px;
+    }
+
+    &--reviews {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 171px;
+    }
+
+    &--contacts {
+      width: 228px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media @desktop-widths {
+
+  .btn {
+
+    &--product-of-week {
+      width: 290px;
+      margin: 35px 55px 0 175px;
+    }
+
+    &--contacts {
+      position: absolute;
+      top: 475px;
+      right: 50%;
+      margin: 0 119px 0 0;
+    }
+  }
 }

@@ -15,7 +15,35 @@
 }
 
 .heading__desc {
+  .container();
   padding: 25px 30px;
+  box-sizing: border-box;
   font-size: 13px;
   line-height: 24px;
+}
+
+@media @tablet-widths {
+
+  .heading__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .heading__desc {
+    padding: 75px 0;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media @desktop-widths {
+
+  .heading__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .heading__desc {
+    padding: 130px 175px;
+  }
 }

@@ -2,8 +2,7 @@
   margin-bottom: 30px;
 
   &--product-of-week {
-    width: 320px;
-    margin: 0 auto;
+    .container();
     padding: 0 30px 42px;
     box-sizing: border-box;
     border-bottom: 3px solid @color-border;
@@ -109,10 +108,9 @@
 
   .catalog-item {
     width: auto;
-    margin: 0;
-    margin-bottom: 55px;
+    margin: 0 0 55px;
 
-    &--product-of-weeek {
+    &--product-of-week {
       min-height: 530px;
       width: auto;
       margin: 0;
@@ -133,7 +131,7 @@
   .catalog-item__header {
     float: left;
     width: 668px;
-    margin-bottom: 57px;
+    margin-bottom: 55px;
     padding-top: 46px;
   }
 
@@ -161,6 +159,7 @@
     &--product-of-week {
       float: left;
       width: 334px;
+      margin: 0 0 5px;
       padding-top: 0;
       padding-right: 45px;
       box-sizing: border-box;
@@ -172,6 +171,7 @@
   .catalog-item__options {
     float: left;
     width: 335px;
+    margin-bottom: 0;
     padding-right: 45px;
     box-sizing: border-box;
   }
@@ -181,9 +181,12 @@
     &--product-of-week {
       float: left;
       width: 334px;
-      margin-top: -55px;
+      margin-top: 0;
+      padding-top: 0;
       padding-right: 45px;
       box-sizing: border-box;
+      font-size: 20px;
+      line-height: 24px;
     }
   }
 }

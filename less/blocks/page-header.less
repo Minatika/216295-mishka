@@ -1,12 +1,43 @@
-@import "../variables";
-
 .page-header {
   position: relative;
+  width: 320px;
+  min-height: 396px;
+  margin: 0 auto;
   background-color: @color-main;
   border-top: 1px solid @color-border;
   border-bottom: 1px solid @color-border;
 }
 
 .page-header__logo {
+  min-height: 34px;
   margin: 22px auto;
+}
+
+@media @tablet-widths {
+
+  .page-header {
+    width: auto;
+    min-height: 88px;
+    margin: 0;
+  }
+
+  .page-header__wrapper {
+    .container();
+    .clearfix();
+    position: relative;
+  }
+
+  .page-header__logo {
+    float: left;
+    width: 86px;
+  }
+}
+
+@media @desktop-widths {
+
+  .page-header__logo {
+    float: none;
+    position: absolute;
+    left: 450px;
+  }
 }

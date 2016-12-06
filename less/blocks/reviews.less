@@ -1,10 +1,14 @@
 .reviews {
-
+  width: 320px;
+  margin: 0 auto;
+  padding: 30px 30px;
+  box-sizing: border-box;
+  border-bottom: 3px solid @color-border;
 }
 
 .reviews__wrapper {
-  padding: 30px 30px 50px;
-  border-bottom: 3px solid @color-border;
+  padding-bottom: 50px;
+  font-size: 0;
 }
 
 .reviews__header {
@@ -24,10 +28,12 @@
 }
 
 .reviews__text {
+  font-size: 15px;
   line-height: 30px;
 }
 
 .reviews__autor-name {
+  margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
   color: @text-color;
@@ -44,6 +50,8 @@
 }
 
 .reviews__btn {
+  display: inline-block;
+  vertical-align: top;
   width: 129px;
   min-height: 50px;
   margin-bottom: 38px;
@@ -52,10 +60,81 @@
   outline: none;
 
   &--prev {
-    background: @color-main url("../../img/icon-left-arrow.svg") no-repeat center;
+    background: @color-main url("../img/icon-left-arrow.svg") no-repeat center;
   }
 
   &--next {
-    background: @color-main url("../../img/icon-right-arrow.svg") no-repeat center;
+    background: @color-main url("../img/icon-right-arrow.svg") no-repeat center;
+  }
+}
+
+@media @tablet-widths {
+
+  .reviews {
+    width: auto;
+    margin: 0;
+    padding-top: 85px;
+  }
+
+  .reviews__wrapper {
+    .container();
+    .clearfix();
+    position: relative;
+  }
+
+  .reviews__title {
+    margin-bottom: 50px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .reviews__text {
+    margin-bottom: 60px;
+    padding-right: 20px;
+    font-size: 17px;
+  }
+
+  .reviews__autor-name {
+    float: left;
+    display: block;
+    width: 334px;
+    margin-bottom: 53px;
+    padding-right: 167px;
+  }
+
+  .reviews__btn {
+    float: left;
+    width: 83px;
+    margin-top: 0;
+    border: none;
+  }
+}
+
+@media @desktop-widths {
+
+  .reviews {
+    padding-top: 75px;
+  }
+
+  .reviews__wrapper {
+    padding-left: 175px;
+    box-sizing: border-box;
+  }
+
+  .reviews__title {
+    margin-bottom: 50px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .reviews__text {
+    margin-bottom: 39px;
+    padding-right: 100px;
+  }
+
+  .reviews__autor-name {
+    width: 350px;
+    margin-bottom: 107px;
+    padding-right: 350px;
   }
 }

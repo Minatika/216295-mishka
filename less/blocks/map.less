@@ -2,5 +2,23 @@
   width: 320px;
   height: 457px;
   margin-bottom: 49px;
-  background: url("../../img/map-mobile@1x.jpg");
+  background: @color-border url("../img/map-mobile@1x.jpg") no-repeat center;
+}
+
+@media @tablet-widths {
+
+  .map {
+    width: auto;
+    margin-bottom: 55px;
+  }
+}
+
+@media @desktop-widths {
+  .map {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    width: 525px;
+    margin-right: 50px;
+  }
 }

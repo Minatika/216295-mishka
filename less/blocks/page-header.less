@@ -1,7 +1,6 @@
 .page-header {
   position: relative;
   width: 320px;
-  min-height: 396px;
   margin: 0 auto;
   background-color: @color-main;
   border-top: 1px solid @color-border;
@@ -9,8 +8,9 @@
 }
 
 .page-header__logo {
-  min-height: 34px;
-  margin: 22px auto;
+  height: 35px;
+  margin: 21px 0 22px;
+  text-align: center;
 }
 
 @media @tablet-widths {
@@ -38,6 +38,7 @@
   .page-header__logo {
     float: none;
     position: absolute;
-    left: 450px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

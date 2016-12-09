@@ -9,6 +9,17 @@
   text-transform: uppercase;
   text-decoration: none;
   border: 2px solid @text-color--light;
+  background: @color-main;
+
+  &:hover {
+    color: @color-main;
+    background: @text-color--light;
+  }
+
+  &:active {
+    color: @color-main--active;
+    background: @text-color--light;
+  }
 
   &--modal {
     color: @color-main;
@@ -43,7 +54,7 @@
 
     &--reviews {
       position: absolute;
-      top: 0;
+      top: 2px;
       right: 0;
       width: 171px;
     }
@@ -66,7 +77,11 @@
 
     &--product-of-week {
       width: 290px;
-      margin: 35px 55px 0 175px;
+      margin: 35px 525px 0 175px;
+    }
+
+    &--reviews {
+      top: 10px;
     }
 
     &--contacts {

@@ -1,6 +1,5 @@
 .modal {
-  width: 320px;
-  margin: 0 auto;
+  .container();
   padding: 36px 30px 46px;
   border: 1px solid @color-border;
   box-shadow: 0 5px 10px 0 @color-shadow;
@@ -23,6 +22,9 @@
 }
 
 .modal__size-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   font-size: 0;
   margin-bottom: 30px;
 }
@@ -32,10 +34,8 @@
 }
 
 .modal__size-item {
-  display: inline-block;
   width: 80px;
   min-height: 16px;
-  margin-right: 8px;
   padding: 16px 0;
   box-sizing: border-box;
   font-size: 17px;
@@ -45,8 +45,8 @@
   border: 2px solid @color-border;
   cursor: pointer;
 
-  &:nth-child(3n) {
-    margin-right: 0;
+  &:hover {
+    border-color: @color-border--hover;
   }
 }
 

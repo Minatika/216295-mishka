@@ -9,12 +9,22 @@
   }
 }
 
+.catalog-item > a {
+  display: block;
+  line-height: 0;
+}
+
 .catalog-item__wrapper {
   border: 1px solid @color-border;
+  border-top: none;
 
   &--product-of-week {
     border: none;
   }
+}
+
+.catalog-item__wrapper h2 {
+  margin: 0;
 }
 
 .catalog-item__header {
@@ -24,7 +34,8 @@
 
 .catalog-item__title {
   display: block;
-  padding: 0 32px;
+  margin: 0;
+  padding: 26px 27px 0;
   font-size: 17px;
   line-height: 24px;
   color: @text-color;
@@ -49,7 +60,8 @@
 }
 
 .catalog-item__desc {
-  padding: 8px 0 20px;
+  margin: 0 27px;
+  padding: 7px 0 18px;
   font-size: 13px;
   line-height: 30px;
   border-bottom: 1px solid @color-border;
@@ -83,15 +95,16 @@
 }
 
 .catalog-item__price {
-  display: inline-block;
-  vertical-align: top;
-  margin: 26px 110px 26px 30px;
+  display: block;
+  margin: 20px 0 28px 27px;
+  box-sizing: border-box;
   font-size: 15px;
   line-height: 24px;
   font-weight: bold;
 
   &--product-of-week {
     display: block;
+    width: auto;
     margin: 18px 0 26px;
     font-size: 17px;
     text-align: center;
@@ -99,33 +112,45 @@
 }
 
 .catalog-item__to-order {
-  display: inline-block;
+  float: right;
+  display: block;
   width: 21px;
   height: 19px;
-  margin: 23px 0 30px 0;
+  margin: 2px 27px 0 auto;
   background: url("../img/icon-cart.svg") no-repeat center;
 }
 
 @media @tablet-widths {
 
   .catalog-item {
+    display: flex;
     width: auto;
     margin: 0 0 55px;
 
     &--product-of-week {
+      display: block;
       width: auto;
       margin: 0;
       padding-bottom: 67px;
     }
   }
+//только для сетки!
+  .catalog-item img {
+    width: 334px;
+    height: 333px;
+  }
 
   .catalog-item__wrapper {
-    float: right;
-    width: 334px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    border-top: 1px solid @color-border;
 
     &--product-of-week {
       .container();
       .clearfix();
+      display: block;
       float: none;
       position: relative;
     }
@@ -139,6 +164,8 @@
   }
 
   .catalog-item__title {
+    padding-top: 24px;
+    font-size: 20px;
 
     &--product-of-week {
       float: left;
@@ -158,6 +185,9 @@
   }
 
   .catalog-item__desc {
+    flex-grow: 1;
+    padding-top: 5px;
+    font-size: 15px;
 
     &--product-of-week {
       float: left;
@@ -194,6 +224,8 @@
   }
 
   .catalog-item__price {
+    margin: 20px 0 26px 30px;
+    font-size: 17px;
 
     &--product-of-week {
       float: left;
@@ -205,13 +237,16 @@
       line-height: 24px;
     }
   }
+
+  .catalog-item__to-order {
+    margin-right: 31px;
+  }
 }
 
 @media @desktop-widths {
 
   .catalog-item {
-    display: inline-block;
-    vertical-align: top;
+    flex-direction: column;
     width: 315px;
     margin-right: 51px;
 
@@ -228,6 +263,8 @@
   }
 
   .catalog-item__wrapper {
+    width: 315px;
+    min-height: 195px;
     float: none;
 
     &--product-of-week {
@@ -237,6 +274,13 @@
     }
   }
 
+  //только для сетки!
+  .catalog-item img {
+    width: 315px;
+    height: 463px;
+  }
+
+
   .catalog-item__header {
     position: absolute;
     top: 10px;
@@ -244,6 +288,7 @@
   }
 
   .catalog-item__title {
+    padding: 24px 25px 0;
 
     &--product-of-week {
       float: right;
@@ -260,6 +305,7 @@
   }
 
   .catalog-item__desc {
+    margin-left: 25px;
 
     &--product-of-week {
       width: 350px;
@@ -280,6 +326,7 @@
   }
 
   .catalog-item__price {
+    margin-left: 25px;
 
     &--product-of-week {
       width: 292px;

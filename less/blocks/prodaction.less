@@ -1,6 +1,6 @@
 .prodaction {
   width: 320px;
-  margin: 0 auto;
+  margin: 0 auto 57px;
   padding: 0 30px;
   box-sizing: border-box;
 }
@@ -12,18 +12,28 @@
 }
 
 .prodaction__title {
+  position: relative;
   margin: 0;
-  padding: 25px 90px 22px;
+  padding: 23px 90px 25px;
   font-size: 17px;
   line-height: 24px;
   color: @text-color;
   font-weight: bold;
   box-sizing: border-box;
+
+  &::before {
+    content: url("../img/icon-video.svg");
+    position: absolute;
+    top: 30px;
+    left: 33px;
+    width: 32px;
+    height: 22px;
+  }
 }
 
 .prodaction__desc {
   margin: 0;
-  padding: 34px 34px 29px;
+  padding: 20px 34px 26px;
   font-size: 13px;
   line-height: 24px;
   box-sizing: border-box;
@@ -33,17 +43,31 @@
 
   .prodaction {
     width: auto;
-    margin: 0;
+    margin: 0 0 63px 0;
   }
 
   .prodaction__wrapper {
     .container();
     .clearfix();
     position: relative;
+    padding-bottom: 45px;
   }
 
   .prodaction__title {
     margin: 455px 0 0 auto;
+    padding: 36px 105px 20px;
+    font-size: 20px;
+
+    &::before {
+      top: 32px;
+      left: 41px;
+    }
+  }
+
+  .prodaction__desc {
+    padding: 12px 40px 36px;
+    font-size: 15px;
+    line-height: 30px;
   }
 
   .prodaction__video {
@@ -58,6 +82,10 @@
 
 @media @desktop-widths {
 
+  .prodaction {
+    margin-bottom: 104px;
+  }
+
   .prodaction__wrapper {
     min-height: 455px;
     padding: 0;
@@ -66,8 +94,13 @@
   .prodaction__title {
     float: right;
     width: 350px;
-    margin-top: 95px;
+    margin: 0;
+    padding: 95px 60px 33px;
 
+    &::before {
+      top: 42px;
+      left: 63px;
+    }
   }
 
   .prodaction__video {
@@ -80,5 +113,6 @@
     float: right;
     width: 350px;
     margin-left: auto;
+    padding: 0 60px 47px;
   }
 }

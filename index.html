@@ -143,17 +143,19 @@
     <div class="modal">
       <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
       <p class="modal__desc">Выберите размер:</p>
-      <div class="modal__size-list">
+      <form class="modal__size-list" action="https://echo.htmlacademy.ru" method="post">
         <input type="radio" name="size" id="size-s" checked>
         <label class="modal__size-item" for="size-s">S</label>
         <input type="radio" name="size" id="size-m">
         <label class="modal__size-item" for="size-m">M</label>
         <input type="radio" name="size" id="size-l">
         <label class="modal__size-item" for="size-l">L</label>
-      </div>
-      <a class="btn btn--modal" href="#">Добавить</a>
+      </form>
+      <button class="btn btn--modal" type="submit">Добавить</button>
     </div>
+    <div class="overlay"></div>
     <script type="text/javascript" src="js/main-nav.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script type="text/javascript" src="js/map.js"></script>
   </body>

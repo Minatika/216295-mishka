@@ -1,9 +1,21 @@
 .modal {
   .container();
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  margin-left: -160px;
+  margin-top: -168px;
+  z-index: 20;
   padding: 36px 30px 46px;
   border: 1px solid @color-border;
   box-shadow: 0 5px 10px 0 @color-shadow;
   box-sizing: border-box;
+  background: @color-main;
+}
+
+.modal-show {
+  display: block;
 }
 
 .modal__title {
@@ -59,6 +71,7 @@
   .modal {
     width: 565px;
     height: 336px;
+    margin-left: -284px;
     padding: 45px 109px;
   }
 

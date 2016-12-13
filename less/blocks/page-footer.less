@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+.page-footer__logo {
+  display: none;
+}
+
 .page-footer__social {
   display: flex;
   flex-wrap: wrap;
@@ -44,17 +48,25 @@
 @media @tablet-widths {
 
   .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
     padding: 0;
   }
 
+  .page-footer__logo {
+    display: block;
+    flex-grow: 1;
+    margin: 50px 0 30px;
+  }
+
   .page-footer__social {
-    float: left;
-    margin-left: 245px;
+    flex-grow: 1;
+    padding-right: 15px;
+    margin-left: 0;
     border-bottom: none;
   }
 
   .page-footer__copyright {
-    float: right;
     margin: 50px 0 30px;
   }
 
@@ -63,6 +75,12 @@
 @media @desktop-widths {
 
   .page-footer__social {
-    margin-left: 432px;
+    padding-right: 0;
+    padding-left: 70px;
   }
+
+  .page-footer__logo {
+    flex-grow: 0;
+  }
+
 }

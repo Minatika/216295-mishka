@@ -31,6 +31,20 @@
   }
 }
 
+.prodaction__video {
+  position: relative;
+
+  &::before {
+    content: url("../img/icon-play.svg");
+    position: absolute;
+    top: 39px;
+    left: 79px;
+    width: 102px;
+    height: 78px;
+    z-index: 10;
+  }
+}
+
 .prodaction__desc {
   margin: 0;
   padding: 20px 34px 26px;
@@ -77,6 +91,11 @@
     width: 668px;
     height: 455px;
     background-color: @color-border;
+
+    &::before {
+      top: 193px;
+      left: 283px;
+    }
   }
 }
 
@@ -107,6 +126,11 @@
     width: 682px;
     position: static;
     float: left;
+
+    &::before {
+      top: 189px;
+      left: 298px;
+    }
   }
 
   .prodaction__desc {

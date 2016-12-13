@@ -58,7 +58,7 @@
   .contacts {
     width: auto;
     margin: 0;
-    padding: 60px 0 18px;
+    padding: 61px 0 18px;
   }
 
   .contacts__wrapper {
@@ -72,8 +72,19 @@
   }
 
   .contacts__title {
+    position: relative;
+    margin-left: -4px;
     font-size: 43px;
     line-height: 50px;
+
+    &::before {
+      content: url("../img/icon-flag.svg");
+      position: absolute;
+      top: -16px;
+      right: 3px;
+      width: 47px;
+      height: 81px;
+    }
   }
 
   .contacts__list {
@@ -104,7 +115,7 @@
 
   .contacts {
     position: relative;
-    padding: 140px 0 113px;
+    padding: 142px 0 113px;
   }
 
   .contacts__wrapper {
@@ -122,6 +133,11 @@
   .contacts__title {
     font-size: 53px;
     line-height: 57px;
+
+    &::before {
+      top: -10px;
+      left: -108px;
+    }
   }
 
   .contacts__list {
@@ -136,8 +152,4 @@
       float: none;
     }
   }
-
-//  .contacts__value {
-//    padding-right: 40px;
-//  }
 }

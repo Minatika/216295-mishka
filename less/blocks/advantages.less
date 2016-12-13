@@ -1,11 +1,7 @@
 .advantages {
-  width: 320px;
-  margin: 0 auto;
-  padding: 34px 30px 30px;
+  .container();
+  padding: 27px 30px 0;
   box-sizing: border-box;
-}
-
-.advantages__wrapper {
 }
 
 .advantages__header {
@@ -14,7 +10,7 @@
 }
 
 .advantages__title {
-  margin: 0;
+  margin: 0 0 2px;
   padding: 0;
   font-size: 25px;
   line-height: 30px;
@@ -28,11 +24,54 @@
 }
 
 .advantages__item {
-  padding-top: 85px;
+  position: relative;
+  padding-top: 83px;
   font-size: 17px;
-  line-height: 17px;
+  line-height: 20px;
   color: @text-color;
   font-weight: bold;
+
+  &--first::before {
+    content: url("../img/icon-feature-1.svg");
+    position: absolute;
+    top: 30px;
+    left: 8px;
+  }
+
+  &--second::before {
+    content: url("../img/icon-feature-3.svg");
+    position: absolute;
+    top: 31px;
+    left: 0;
+  }
+
+  &--third::before {
+    content: url("../img/icon-feature-5.svg");
+    position: absolute;
+    top: 35px;
+    left: 8px;
+  }
+
+  &--fourth::before {
+    content: url("../img/icon-feature-2.svg");
+    position: absolute;
+    top: 33px;
+    left: 3px;
+  }
+
+  &--fifth::before {
+    content: url("../img/icon-feature-4.svg");
+    position: absolute;
+    top: 34px;
+    left: -6px;
+  }
+
+  &--sixth::before {
+    content: url("../img/icon-feature-6.svg");
+    position: absolute;
+    top: 32px;
+    left: 3px;
+  }
 }
 
 @media @tablet-widths {
@@ -40,7 +79,7 @@
   .advantages {
     width: auto;
     margin: 0;
-    padding-top: 50px;
+    padding-top: 46px;
   }
 
   .advantages__wrapper {
@@ -50,6 +89,7 @@
   }
 
   .advantages__title {
+    margin: 0 0 3px -4px;
     font-size: 43px;
     line-height: 50px;
   }
@@ -65,13 +105,37 @@
     padding: 98px 40px 7px 0;
     font-size: 20px;
     line-height: 25px;
+
+    &--first::before {
+      top: 47px;
+    }
+
+    &--second::before {
+      top: 48px;
+    }
+
+    &--third::before {
+      top: 52px;
+    }
+
+    &--fourth::before {
+      top: 50px;
+    }
+
+    &--fifth::before {
+      top: 51px;
+    }
+
+    &--sixth::before {
+      top: 49px;
+    }
   }
 }
 
 @media @desktop-widths {
 
   .advantages {
-    padding-top: 63px;
+    padding-top: 59px;
   }
 
   .advantages__header {
@@ -80,6 +144,7 @@
   }
 
   .advantages__title {
+    margin-bottom: 1px;
     font-size: 53px;
     line-height: 57px;
   }

@@ -1,4 +1,5 @@
 .page-footer {
+  width: auto;
   margin-top: 39px;
   background-color: @color-gray;
 }
@@ -10,18 +11,26 @@
   box-sizing: border-box;
 }
 
+.page-footer__logo {
+  display: none;
+}
+
 .page-footer__social {
-  border-bottom: 1px solid @color-gray--dark;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-right: 5px;
   text-align: center;
+  border-bottom: 1px solid @color-gray--dark;
 }
 
 .page-footer__copyright {
   float: left;
   display: block;
   margin: 0 38px;
-  padding: 30px 0;
+  padding: 7px 0 22px;
   font-size: 19px;
-  line-height: 18px;
+  line-height: 27px;
   color: @text-color;
   font-weight: bold;
 }
@@ -32,25 +41,33 @@
   width: 27px;
   height: 34px;
   font-size: 0;
-  margin-left: 25px;
+  margin-left: 29px;
   background: url("../img/logo-htmlacademy.svg") no-repeat center;
 }
 
 @media @tablet-widths {
 
   .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
     padding: 0;
   }
 
+  .page-footer__logo {
+    display: block;
+    flex-grow: 1;
+    margin: 50px 0 30px;
+  }
+
   .page-footer__social {
-    float: left;
-    margin-left: 260px;
+    flex-grow: 1;
+    padding-right: 15px;
+    margin-left: 0;
     border-bottom: none;
   }
 
   .page-footer__copyright {
-    float: right;
-    margin: 30px 0;
+    margin: 50px 0 30px;
   }
 
 }
@@ -58,6 +75,12 @@
 @media @desktop-widths {
 
   .page-footer__social {
-    margin-left: 450px;
+    padding-right: 0;
+    padding-left: 70px;
   }
+
+  .page-footer__logo {
+    flex-grow: 0;
+  }
+
 }

@@ -9,8 +9,20 @@
   text-transform: uppercase;
   text-decoration: none;
   border: 2px solid @text-color--light;
+  background: @color-main;
+
+  &:hover {
+    color: @color-main;
+    background: @text-color--light;
+  }
+
+  &:active {
+    color: @color-main--active;
+    background: @text-color--light;
+  }
 
   &--modal {
+    width: 100%;
     color: @color-main;
     background-color: @color-secondary;
     border-color: @color-secondary;
@@ -26,7 +38,8 @@
   }
 
   &--order-settings {
-    width: 256px;
+    width: 260px;
+    margin: 0 3px;
     background-color: @color-main;
   }
 }
@@ -43,7 +56,7 @@
 
     &--reviews {
       position: absolute;
-      top: 0;
+      top: 2px;
       right: 0;
       width: 171px;
     }
@@ -53,8 +66,11 @@
       margin: 0 auto;
     }
 
+    &--prodaction {
+      margin: 0 41px;
+    }
+
     &--order-settings {
-      float: left;
       width: 228px;
     }
   }
@@ -66,7 +82,11 @@
 
     &--product-of-week {
       width: 290px;
-      margin: 35px 55px 0 175px;
+      margin: 35px 525px 0 175px;
+    }
+
+    &--reviews {
+      top: 80px;
     }
 
     &--contacts {
@@ -78,7 +98,7 @@
 
     &--prodaction {
       float: right;
-      margin: 0 55px 0 60px;
+      margin: 0 57px;
       width: 228px;
     }
 

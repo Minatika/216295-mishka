@@ -1,48 +1,141 @@
 .main-nav {
-  position: relative;
-  width: 320px;
-  margin: 0 auto;
+  .container();
   padding: 0;
-
-  &--closed {
-
-  }
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: 31px;
-  left: 270px;
+  top: 27px;
+  right: 30px;
+  width: 21px;
+  height: 21px;
+  font-size: 0;
+  border: none;
+  background-color: @color-main;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.main-nav__list, .main-nav__user-list {
+.main-nav--closed .main-nav__toggle {
+  background: url("../img/icon-menu-open.svg") no-repeat center;
+}
+
+.main-nav--opened .main-nav__toggle {
+  background: url("../img/icon-menu-close.svg") no-repeat center;
+}
+
+.main-nav__list, .main-nav__user-list, .main-nav__hidden-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.main-nav__hidden-list {
+  display: none;
+}
 
-.main-nav__item, .main-nav__user-item {
-  padding: 29px 0;
-  font-size: 17px;
-  line-height: 24px;
+
+.main-nav__item, .main-nav__user-item, .main-nav__hidden-item {
+  padding: 27px 27px 27px 75px;
   color: @text-color;
   font-weight: bold;
-  text-align: center;
   border-top: 1px solid @color-border;
 
   & a {
     text-decoration: none;
     color: @text-color;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__item--active {
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.main-nav__user-item {
+  position: relative;
+  font-size: 17px;
+  line-height: 24px;
+
+  &--search::before {
+    content: url("../img/icon-search.svg");
+    position: absolute;
+    top: 31px;
+    left: 31px;
+    width: 18px;
+    height: 19px;
+    opacity: 0.2;
+  }
+
+  &--basket::before {
+    content: url("../img/icon-cart.svg");
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 21px;
+    height: 18px;
+    opacity: 0.2;
+  }
+}
+
+@media @mobile-widths-only {
+
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--closed .main-nav__user-list {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+    height: auto;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__user-list {
+    display: block;
+  }
 }
 
 @media @tablet-widths {
 
   .main-nav {
+    position: relative;
     width: auto;
     margin: 0;
+  }
 
+  .main-nav__wrapper {
+    .container();
+    .clearfix();
   }
 
   .main-nav__toggle {
@@ -51,34 +144,116 @@
 
   .main-nav__list {
     position: absolute;
+    top: 79px;
     left: 0;
-    top: 80px;
+    font-size: 0;
   }
 
   .main-nav__item {
     display: inline-block;
     vertical-align: top;
     white-space: nowrap;
+    padding: 27px 35px 27px 0;
+    font-size: 15px;
+    line-height: 24px;
     border: none;
   }
 
   .main-nav__user-list {
     float: right;
-    width: 400px;
+    width: 350px;
+    font-size: 0;
   }
 
   .main-nav__user-item {
     display: inline-block;
     vertical-align: top;
     white-space: nowrap;
+    padding: 32px 0 32px 83px;
+    border-left: 1px solid @color-border;
+    border-top: none;
+
+    &--search {
+      font-size: 0;
+
+      &::before {
+        top: 35px;
+        left: 35px;
+      }
+    }
+
+    &--basket::before {
+      top: 36px;
+      left: 32px;
+    }
+  }
+
+  .main-nav__hidden-list {
+    display: block;
+    position: absolute;
+    top: 79px;
+    right: 0;
+  }
+
+  .main-nav__hidden-item {
+    display: none;
+
+    &--delivery {
+      display: block;
+      padding-right: 0;
+      color: @text-color;
+      font-weight: normal;
+      border: none;
+
+      &:hover, &:active {
+        opacity: 1;
+      }
+    }
   }
 }
 
 @media @desktop-widths {
 
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .main-nav__list {
     position: static;
-    float: left;
+    flex-grow: 1;
+  }
+
+  .main-nav__item {
+    padding: 32px 35px 32px 34px;
+    font-size: 17px;
+    border-left: 1px solid @color-border;
+
+    &:first-child {
+      padding-left: 0;
+      border-left: none;
+    }
+  }
+
+  .main-nav__hidden-list {
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+    z-index: 10;
+  }
+
+  .main-nav__hidden-item {
+    display: block;
+    padding-left: 34px;
+    border: none;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:nth-child(2) {
+      flex-grow: 1;
+    }
   }
 
 }

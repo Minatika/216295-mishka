@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Мишка</title>
   </head>
@@ -12,16 +13,21 @@
         <div class="page-header__logo">
           <img src="img/logo-mobile.svg" alt="Мишка" width="86" height="35">
         </div>
-        <nav class="main-nav main-nav--closed">
-          <button class="main-nav__toggle" type="button"><img src="img/icon-menu-open.svg" alt="Открыть меню"></button>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
               <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
             </ul>
             <ul class="main-nav__user-list">
-              <li class="main-nav__user-item">Поиск по сайту</li>
-              <li class="main-nav__user-item">Корзина: пока пуста</li>
+              <li class="main-nav__user-item main-nav__user-item--search">Поиск по сайту</li>
+              <li class="main-nav__user-item main-nav__user-item--basket">Корзина: пока пуста</li>
+            </ul>
+            <ul class="main-nav__hidden-list">
+              <li class="main-nav__hidden-item"><a href="new-arrivals.html">Новые поступления</a></li>
+              <li class="main-nav__hidden-item"><a href="sale.html">Распродажа</a></li>
+              <li class="main-nav__hidden-item main-nav__hidden-item--delivery">Бесплатная доставка по России</li>
             </ul>
           </div>
         </nav>
@@ -30,7 +36,7 @@
     <main>
       <section class="sections-catalog">
         <header class="sections-catalog__header">
-          <h2 class="sections-catalog__title">Милые штуки ручной работы для дома</h2>
+          <h2 class="sections-catalog__title">Милые штуки ручной<br> работы для дома</h2>
         </header>
         <div class="sections-catalog__wrapper">
           <a class="sections-catalog__item sections-catalog__item--home" href="home-furnishings.html">Предметы интерьера</a>
@@ -58,7 +64,7 @@
               <td class="catalog-item__value">15 см</td>
             </tr>
           </table>
-          <img src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки" width="260" height="315">
+          <img class="catalog-item__photo" src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки" width="260" height="315">
           <div class="catalog-item__price catalog-item__price--product-of-week">Цена: 990 руб.</div>
           <a class="btn btn--product-of-week" href="knitted-baskets.html">Заказать</a>
         </div>
@@ -70,14 +76,14 @@
           </header>
           <ul class="advantages__list">
             <div class="advantages__group">
-              <li class="advantages__item">Экологически  чистые материалы</li>
-              <li class="advantages__item">Скандинавский стиль  по&nbsp;российской цене</li>
-              <li class="advantages__item">Увеличивает лайки на&nbsp;фотографиях</li>
+              <li class="advantages__item advantages__item--first">Экологически  чистые&nbsp;материалы</li>
+              <li class="advantages__item advantages__item--second">Скандинавский стиль  по&nbsp;российской цене</li>
+              <li class="advantages__item advantages__item--third">Увеличивает лайки на&nbsp;фотографиях</li>
             </div>
             <div class="advantages__group">
-              <li class="advantages__item">Связано вручную с  любовью и умилением</li>
-              <li class="advantages__item">Поддержка отечественного производителя</li>
-              <li class="advantages__item">Поставляется в  подарочной упаковке</li>
+              <li class="advantages__item advantages__item--fourth">Связано вручную с  любовью&nbsp;и умилением</li>
+              <li class="advantages__item advantages__item--fifth">Поддержка отечественного производителя</li>
+              <li class="advantages__item advantages__item--sixth">Поставляется в  подарочной&nbsp;упаковке</li>
             </div>
           </ul>
         </div>
@@ -111,21 +117,22 @@
           </tr>
           <tr class="contacts__item contacts__item--address">
             <td class="contacts__key">адрес:</td>
-            <td class="contacts__value">г. Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис 101</td>
+            <td class="contacts__value">г. Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8,&nbsp;офис 101</td>
           </tr>
         </table>
       </div>
-      <div class="map"></div>
+      <div id="map" class="map"></div>
       <a class="btn btn--contacts" href="feedback.html">Напишите нам</a>
     </section>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
+        <p class="page-footer__logo">
+          <a href="index.html"><img src="img/logo-mobile.svg" alt="Мишка" width="102" height="42"></a>
+        </p>
         <p class="page-footer__social">
-          <span class="social-links">
-            <a class="social-link social-link--in" href="https://instagram.com/htmlacademy">Мы в Инстаграме</a>
-            <a class="social-link social-link--fb" href="https://facebook.com/htmlacademy">Мы в Фейсбуке</a>
-            <a class="social-link social-link--tw" href="https://twitter.com/htmlacademy">Мы в Твиттере</a>
-          </span>
+          <a class="social-link social-link--in" href="https://instagram.com/htmlacademy">Мы в Инстаграме</a>
+          <a class="social-link social-link--fb" href="https://facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          <a class="social-link social-link--tw" href="https://twitter.com/htmlacademy">Мы в Твиттере</a>
         </p>
         <p class="page-footer__copyright">
           Разработано
@@ -136,15 +143,20 @@
     <div class="modal">
       <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
       <p class="modal__desc">Выберите размер:</p>
-      <div class="modal__size-list">
+      <form class="modal__size-list" action="https://echo.htmlacademy.ru" method="post">
         <input type="radio" name="size" id="size-s" checked>
         <label class="modal__size-item" for="size-s">S</label>
         <input type="radio" name="size" id="size-m">
         <label class="modal__size-item" for="size-m">M</label>
         <input type="radio" name="size" id="size-l">
         <label class="modal__size-item" for="size-l">L</label>
-      </div>
-      <a class="btn btn--modal" href="#">Добавить</a>
+      </form>
+      <button class="btn btn--modal" type="submit">Добавить</button>
     </div>
+    <div class="overlay"></div>
+    <script type="text/javascript" src="js/main-nav.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript" src="js/map.js"></script>
   </body>
 </html>

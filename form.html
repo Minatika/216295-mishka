@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Мишка</title>
   </head>
@@ -10,18 +11,23 @@
       <div class="page-header__wrapper">
         <h1 class="visually-hidden">Мишка</h1>
         <div class="page-header__logo">
-          <img src="img/logo-mobile.svg" alt="Мишка" width="86" height="35">
+          <a href="index.html"><img src="img/logo-mobile.svg" alt="Мишка" width="86" height="35"></a>
         </div>
-        <nav class="main-nav main-nav--closed">
-          <button class="main-nav__toggle" type="button"><img src="img/icon-menu-open.svg" alt="Открыть меню"></button>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
               <li class="main-nav__item"><a>Вязание на заказ</a></li>
             </ul>
             <ul class="main-nav__user-list">
-              <li class="main-nav__user-item">Поиск по сайту</li>
-              <li class="main-nav__user-item">Корзина: пока пуста</li>
+              <li class="main-nav__user-item main-nav__user-item--search">Поиск по сайту</li>
+              <li class="main-nav__user-item main-nav__user-item--basket">Корзина: пока пуста</li>
+            </ul>
+            <ul class="main-nav__hidden-list">
+              <li class="main-nav__hidden-item"><a href="new-arrivals.html">Новые поступления</a></li>
+              <li class="main-nav__hidden-item"><a href="sale.html">Распродажа</a></li>
+              <li class="main-nav__hidden-item main-nav__hidden-item--delivery">Бесплатная доставка по России</li>
             </ul>
           </div>
         </nav>
@@ -37,9 +43,9 @@
           <div class="order-settings__wrapper">
             <fieldset class="order-settings__item">
               <legend class="order-settings__title">Тип</legend>
-              <div class="order-settings__controls">
+              <div class="order-settings__controls order-settings__controls--radio">
                 <input type="radio" name="type" id="interior" checked>
-                <label class="order-settings__label order-settings__label--for-radio" for="type-interior">Аксессуар для интерьера</label>
+                <label class="order-settings__label order-settings__label--for-radio" for="interior">Аксессуар для интерьера</label>
                 <input type="radio" name="type" id="kind-toy">
                 <label class="order-settings__label order-settings__label--for-radio" for="kind-toy">Детская игрушка</label>
               </div>
@@ -48,13 +54,13 @@
           <div class="order-settings__wrapper">
             <fieldset class="order-settings__item">
               <legend class="order-settings__title">Цвет</legend>
-              <div class="order-settings__controls order-settings__controls--color">
+              <div class="order-settings__controls order-settings__controls--color order-settings__controls--checkbox">
                 <input type="checkbox" name="white" id="white" checked>
                 <label class="order-settings__label order-settings__label--for-checkbox" for="white">Белый</label>
                 <input type="checkbox" name="gray" id="gray" checked>
                 <label class="order-settings__label order-settings__label--for-checkbox" for="gray">Серый</label>
                 <input type="checkbox" name="tiffany" id="tiffany">
-                <label class="order-settings__label order-settings__label--for-checkbox" for="tiffany">"Тиффани"</label>
+                <label class="order-settings__label order-settings__label--for-checkbox" for="tiffany">&laquo;Тиффани&raquo;</label>
                 <input type="checkbox" name="black" id="black">
                 <label class="order-settings__label order-settings__label--for-checkbox" for="black">Черный</label>
                 <input type="checkbox" name="pink" id="pink">
@@ -67,13 +73,19 @@
           <div class="order-settings__wrapper">
             <fieldset class="order-settings__item">
               <legend class="order-settings__title">ФИО</legend>
-              <div class="order-settings__controls">
-                <label class="order-settings__label order-settings__label--for-input" for="name">Имя:</label>
-                <input class="order-settings__input" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
-                <label class="order-settings__label" for="surname">Фамилия:</label>
-                <input class="order-settings__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
-                <label class="order-settings__label" for="patronymic">Отчество:</label>
-                <input class="order-settings__input" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+              <div class="order-settings__controls order-settings__controls--fio">
+                <div class="order-settings__row">
+                  <label class="order-settings__label order-settings__label--for-input" for="name">Имя:</label>
+                  <input class="order-settings__input" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
+                </div>
+                <div class="order-settings__row">
+                  <label class="order-settings__label order-settings__label--for-input" for="surname">Фамилия:</label>
+                  <input class="order-settings__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
+                </div>
+                <div class="order-settings__row">
+                  <label class="order-settings__label order-settings__label--for-input" for="patronymic">Отчество:</label>
+                  <input class="order-settings__input" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+                </div>
               </div>
             </fieldset>
           </div>
@@ -113,12 +125,13 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
+        <p class="page-footer__logo">
+          <a href="index.html"><img src="img/logo-mobile.svg" alt="Мишка" width="102" height="42"></a>
+        </p>
         <p class="page-footer__social">
-          <span class="social-links">
-            <a class="social-link social-link--in" href="https://instagram.com/htmlacademy">Мы в Инстаграме</a>
-            <a class="social-link social-link--fb" href="https://facebook.com/htmlacademy">Мы в Фейсбуке</a>
-            <a class="social-link social-link--tw" href="https://twitter.com/htmlacademy">Мы в Твиттере</a>
-          </span>
+          <a class="social-link social-link--in" href="https://instagram.com/htmlacademy">Мы в Инстаграме</a>
+          <a class="social-link social-link--fb" href="https://facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          <a class="social-link social-link--tw" href="https://twitter.com/htmlacademy">Мы в Твиттере</a>
         </p>
         <p class="page-footer__copyright">
           Разработано
@@ -126,5 +139,6 @@
         </p>
       </div>
     </footer>
+    <script type="text/javascript" src="js/main-nav.js"></script>
   </body>
 </html>

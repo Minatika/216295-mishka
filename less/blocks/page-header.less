@@ -10,6 +10,23 @@
   height: 35px;
   margin: 21px 0 22px;
   text-align: center;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--current:hover, &--current:active {
+    opacity: 1;
+  }
+}
+
+.page-header__logo img {
+  width: 86px;
+  height: auto;
 }
 
 @media @tablet-widths {
@@ -29,7 +46,12 @@
 
   .page-header__logo {
     float: left;
-    width: 86px;
+    margin-top: 22px;
+  }
+
+  .page-header__logo img {
+    width: 113px;
+    height: auto;
   }
 }
 
@@ -41,5 +63,13 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
+    width: 149px;
+    height: 72px;
+    margin-top: 9px;
+  }
+
+  .page-header__logo img {
+    width: 149px;
+    height: auto;
   }
 }

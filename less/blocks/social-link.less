@@ -8,17 +8,23 @@
 
   &--in {
     flex-shrink: 1;
-    background: url("../img/icon-insta.svg") no-repeat center;
-  }
-
-  &--fb {
-    background: url("../img/icon-fb.svg") no-repeat center;
-  }
-
-  &--tw {
-    background: url("../img/icon-twitter.svg") no-repeat center;
   }
 }
+
+.social-link__icon {
+  fill: @color-dark;
+}
+
+.social-link:hover .social-link__icon {
+  fill: @color-hover;
+}
+
+.social-link:active .social-link__icon {
+  fill: @color-hover;
+  opacity: 0.3;
+}
+
+
 
 @media @tablet-widths {
 

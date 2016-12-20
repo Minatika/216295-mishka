@@ -2,11 +2,10 @@
   .container();
   padding: 35px 30px 0;
   box-sizing: border-box;
-  border-bottom: 3px solid @color-border;
 }
 
 .reviews__wrapper {
-  padding-bottom: 50px;
+  padding-bottom: 44px;
   font-size: 0;
 }
 
@@ -22,12 +21,12 @@
 }
 
 .reviews__item {
-  margin: 0 0 26px;
+  margin: 0 0 25px;
   padding: 0;
 }
 
 .reviews__text {
-  margin-bottom: 26px;
+  margin-bottom: 25px;
   font-size: 15px;
   line-height: 30px;
 }
@@ -50,8 +49,8 @@
   display: inline-block;
   vertical-align: top;
   width: 129px;
-  min-height: 50px;
-  margin-bottom: 39px;
+  min-height: 52px;
+  margin-bottom: 38px;
   font-size: 0;
   border: 1px solid @color-border;
   outline: none;
@@ -78,19 +77,21 @@
   .reviews {
     width: auto;
     margin: 0;
-    padding-top: 113px;
-    background: url("../img/review@1x.jpg") no-repeat left center;
+    padding-top: 41px;
+    background: @color-main url("../img/review@1x.jpg") no-repeat left top;
+    background-size: auto auto;
   }
 
   .reviews__wrapper {
     .container();
     .clearfix();
     position: relative;
+    padding-bottom: 35px;
   }
 
   .reviews__title {
     margin-left: -4px;
-    margin-bottom: 47px;
+    margin-bottom: 48px;
     font-size: 43px;
     line-height: 50px;
   }
@@ -132,19 +133,21 @@
 
   .reviews__wrapper {
     padding-left: 175px;
+    padding-bottom: 28px;
     box-sizing: border-box;
-    background: url("../img/review@1x.jpg") no-repeat left top;
+    background: @color-main url("../img/review@1x.jpg") no-repeat left top;
+    background-size: auto auto;
   }
 
   .reviews__title {
-    padding-top: 70px;
+    padding-top: 71px;
     margin-bottom: 48px;
     font-size: 53px;
     line-height: 57px;
   }
 
   .reviews__text {
-    margin-bottom: 39px;
+    margin-bottom: 40px;
     padding-right: 100px;
   }
 
@@ -152,5 +155,19 @@
     width: 350px;
     margin-bottom: 135px;
     padding-right: 350px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1149px) and (min-resolution: 144dpi), (min-width: 768px) and (max-width: 1149px) and (min-resolution: 1.5dppx) {
+
+  .reviews {
+    background-image: url("../img/review@2x.jpg");
+  }
+}
+
+@media (min-width: 1150px) and (min-resolution: 144dpi), (min-width: 1150px) and (min-resolution: 1.5dppx) {
+
+  .reviews__wrapper {
+    background-image: url("../img/review@2x.jpg");
   }
 }

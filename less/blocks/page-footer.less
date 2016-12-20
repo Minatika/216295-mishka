@@ -33,6 +33,10 @@
   line-height: 27px;
   color: @text-color;
   font-weight: bold;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__academy {
@@ -42,10 +46,21 @@
   height: 34px;
   font-size: 0;
   margin-left: 29px;
-  background: url("../img/logo-htmlacademy.svg") no-repeat center;
+}
+
+.page-footer__academy-icon {
+  fill: @color-secondary;
+}
+
+.page-footer__copyright:hover .page-footer__academy-icon {
+  fill: @color-hover;
 }
 
 @media @tablet-widths {
+
+  .page-footer {
+    margin-top: 41px;
+  }
 
   .page-footer__wrapper {
     display: flex;
@@ -56,7 +71,32 @@
   .page-footer__logo {
     display: block;
     flex-grow: 1;
+    width: 102px;
+    height: 34px;
     margin: 50px 0 30px;
+    font-size: 0;
+  }
+
+  .page-footer__logo-mishka {
+    fill: @color-dark;
+  }
+
+  .page-footer__logo:hover .page-footer__logo-mishka {
+    fill: @color-hover;
+
+    &--current {
+      fill: @color-dark;
+    }
+  }
+
+  .page-footer__logo:active .page-footer__logo-mishka {
+    fill: @color-hover;
+    opacity: 0.3;
+
+    &--current {
+      fill: @color-dark;
+      opacity: 1;
+    }
   }
 
   .page-footer__social {
@@ -73,6 +113,10 @@
 }
 
 @media @desktop-widths {
+
+  .page-footer {
+    margin-top: 45px;
+  }
 
   .page-footer__social {
     padding-right: 0;

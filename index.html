@@ -7,19 +7,19 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body class="page">
-    <header class="page-header">
+    <header class="page-header page-header--main">
       <div class="page-header__wrapper">
         <h1 class="visually-hidden">Мишка</h1>
-        <div class="page-header__logo page-header__logo--current">
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img src="img/logo-mobile.svg" alt="Мишка" width="86" height="72">
-          </picture>
-        </div>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">Открыть меню</button>
           <div class="main-nav__wrapper">
+            <div class="page-header__logo page-header__logo--current">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" alt="Мишка" width="86" height="72">
+              </picture>
+            </div>
             <ul class="main-nav__list">
               <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
               <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
@@ -54,7 +54,6 @@
           <a class="sections-catalog__item sections-catalog__item--home" href="home-furnishings.html">Предметы интерьера</a>
           <a class="sections-catalog__item sections-catalog__item--kids" href="kids-toys.html">Детские игрушки</a>
         </div>
-        <div class="sections-catalog__wavy-fill"></div>
       </section>
       <article class="catalog-item catalog-item--product-of-week">
         <div class="catalog-item__wrapper catalog-item__wrapper--product-of-week">

@@ -36,6 +36,12 @@
     min-height: 88px;
     margin: 0;
     border-top: none;
+    border-bottom: none;
+    background-image: linear-gradient(#ffffff 87px, @color-border 87px, @color-border 88px, @color-gray 88px);
+
+    &--main {
+      background-image: linear-gradient(#ffffff 87px, @color-border 87px, @color-border 88px, #f9f9f9 88px);
+    }
   }
 
   .page-header__wrapper {
@@ -45,7 +51,8 @@
   }
 
   .page-header__logo {
-    float: left;
+//    float: left;
+    order: -2;
     margin-top: 22px;
   }
 
@@ -58,14 +65,17 @@
 @media @desktop-widths {
 
   .page-header__logo {
-    float: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
+//    float: none;
+//    position: absolute;
+//    left: 50%;
+//    trnsform: translateX(-25%);
+//    z-index: 100;
+    order: -1;
+    flex-grow: 1;
     width: 149px;
     height: 72px;
     margin-top: 9px;
+    margin-right: 60px;
   }
 
   .page-header__logo img {

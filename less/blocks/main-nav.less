@@ -127,6 +127,27 @@
     display: none;
   }
 
+  .main-nav--opened .main-nav__list {
+    position: absolute;
+    top: 78px;
+    left: 50%;
+    z-index: 10;
+    width: 320px;
+    transform: translateX(-50%);
+    background-color: @color-main;
+  }
+
+  .main-nav--opened .main-nav__user-list {
+    position: absolute;
+    top: 235px;
+    left: 50%;
+    z-index: 10;
+    width: 320px;
+    transform: translateX(-50%);
+    border-bottom: 1px solid @color-border;
+    background-color: @color-main;
+  }
+
   .main-nav--nojs .main-nav__toggle {
     display: none;
   }

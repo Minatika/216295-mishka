@@ -154,6 +154,10 @@
   outline: none;
   box-shadow: 0 2px 0 0 @text-color;
 
+  &:hover, &:focus {
+    box-shadow: 0 2px 0 0 @color-secondary;
+  }
+
   &--message {
     width: 256px;
     height: 138px;
@@ -167,10 +171,6 @@
     &:hover, &:focus {
       box-shadow: 0 0 0 2px @color-secondary;
     }
-  }
-
-  &:hover, &:focus {
-    box-shadow: 0 2px 0 0 @color-secondary;
   }
 
   &:last-child {

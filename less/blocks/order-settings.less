@@ -187,6 +187,7 @@
 }
 
 .order-settings input[type="tel"] {
+  width: 220px;
   padding-right: 40px;
 }
 
@@ -211,7 +212,7 @@
   opacity: 0.2;
 }
 
-.order-settings__input:hover + .order-settings__tel {
+.order-settings__input:hover + .order-settings__tel, .order-settings__input:hover + .order-settings__email {
   opacity: 1;
 
   & .order-settings__icon {
@@ -219,7 +220,7 @@
   }
 }
 
-.order-settings__input:focus + .order-settings__tel {
+.order-settings__input:focus + .order-settings__tel, .order-settings__input:focus + .order-settings__email {
   opacity: 0.3;
 
   & .order-settings__icon {
@@ -228,6 +229,7 @@
 }
 
 .order-settings input[type="email"] {
+  width: 220px;
   padding-right: 40px;
 }
 
@@ -401,6 +403,7 @@
 
   .order-settings input[type="tel"] {
     width: 501px;
+    height: 19px;
     padding-right: 55px;
     background-position: 95% 50%;
   }
@@ -411,7 +414,8 @@
   }
 
   .order-settings input[type="email"] {
-    width: 501px;
+    width: 428px;
+    height: 19px;
     padding-right: 55px;
     background-position: 95% 50%;
   }
@@ -493,7 +497,7 @@
   }
 
   .order-settings input[type="email"] {
-    width: 700px;
+    width: 647px;
     padding-right: 35px;
     background-position: 99% 50%;
   }

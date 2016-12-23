@@ -143,9 +143,9 @@
 
 .order-settings__input {
   width: 260px;
+  height: 18px;
   margin: 0 0 0 3px;
   padding: 15px 0 17px;
-  box-sizing: border-box;
   font-size: 17px;
   line-height: 18px;
   color: @text-color--light;
@@ -160,6 +160,7 @@
     margin: 4px 0 0 4px;
     padding: 15px;
     box-sizing: border-box;
+    font-family: "Open Sans", "Times News Roman", sans-serif;
     box-shadow: 0 0 0 2px @text-color;
     resize: none;
 
@@ -264,7 +265,7 @@
 
     &:nth-of-type(5) {
       .order-settings__item {
-        padding-top: 0;
+        padding: 0 0 52px;
       }
     }
   }
@@ -383,10 +384,15 @@
 
   .order-settings__input {
     flex-grow: 1;
-    margin-left: 0;
-    padding: 14px 0 14px 18px;
+    height: 19px;
+    margin: 0;
+    padding: 15px 0 16px 18px;
     font-size: 19px;
-    line-height: 18px;
+    line-height: 19px;
+
+    &--message {
+      height: 138px;
+    }
 
     &--color {
       background-color: @color-border;
@@ -418,7 +424,7 @@
   .order-settings__legend {
     order: 2;
     margin: 0;
-    padding-top: 5px;
+    padding-top: 6px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -429,6 +435,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 11px;
+    padding-top: 2px;
   }
 }
 

@@ -71,6 +71,7 @@
   height: 21px;
   font-size: 0;
   border: none;
+  outline: none;
   background-color: #ffffff;
 }
 .main-nav__toggle:hover {
